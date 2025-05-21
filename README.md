@@ -15,7 +15,7 @@ A simple store application built using **Spring Boot** and **Maven**. This is my
 
 ## 🛠️ Tech Stack
 
-- Java 17+
+- Java 24+
 - Spring Boot
 - Spring Web
 - Spring Data JPA
@@ -28,11 +28,13 @@ A simple store application built using **Spring Boot** and **Maven**. This is my
     src/
     ├── main/
     │   ├── java/com/example/store/
-    │   │   ├── controller/
+    │   │   ├── controller/indexController
     │   │   ├── model/
     │   │   ├── repository/
     │   │   └── StoreApplication.java
     │   └── resources/
+    │       └── static
+    │       │   └── index.html
     │       └── application.properties
     ├── test/
 

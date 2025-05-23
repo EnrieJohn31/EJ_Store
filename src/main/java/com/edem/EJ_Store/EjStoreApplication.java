@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EjStoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EjStoreApplication.class, args);
+	//	SpringApplication.run(EjStoreApplication.class, args);
+		var orderService = new OrderService(new PayPalPaymentService());
+		orderService.placeOrder();
 	}
 
 }

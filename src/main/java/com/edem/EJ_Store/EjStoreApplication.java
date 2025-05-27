@@ -2,14 +2,14 @@ package com.edem.EJ_Store;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class EjStoreApplication {
 
 	public static void main(String[] args) {
-	//	SpringApplication.run(EjStoreApplication.class, args);
-		var orderService = new OrderService();
-		orderService.setPaymentService(new PayPalPaymentService());
+		ApplicationContext context = SpringApplication.run(EjStoreApplication.class, args);
+		var orderService = context.getBean(OrderService.class);
 		orderService.placeOrder();
 	}
 
